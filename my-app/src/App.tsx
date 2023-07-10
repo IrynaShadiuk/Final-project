@@ -1,14 +1,15 @@
 
 import './App.scss';
+import Layout from './components/layout/Layout';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-       {/* <Header />
-       <Main />
-       <Footer /> */}
-    </div>
-  );
+    // <Router>
+      <Layout>
+      </Layout>
+    // </Router>
+  )
 }
+
 
 export default App;
