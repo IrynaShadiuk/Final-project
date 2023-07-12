@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Header from './Header/Header';
 import AdminPage from '../admin/Admin';
+import Footer from './Footer/Footer';
 
 interface LayoutProps {
   children: ReactNode;
@@ -12,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <main>{children}</main>
       {/* <AdminPage /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
