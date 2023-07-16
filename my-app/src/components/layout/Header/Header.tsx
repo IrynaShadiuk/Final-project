@@ -1,6 +1,9 @@
 import React from 'react';
 import "./header.scss"
 import logo from '../../img/logo.png';
+import { Link, useLocation} from 'react-router-dom'
+import { useRoute } from '../../shared_/hooks/useRoute';
+
 
 
 
@@ -14,23 +17,34 @@ const Header = () => {
         <nav className="menu">
           <ul className="menu__list">
             <li className="menu__item">
-              <a href="/">Home</a>
+            <Link className={useRoute('/') ? 'active' : ''} to="/">
+                Home
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="/order">Order</a>
+            <Link className={useRoute('/order') ? 'active' : ''} to="/order">
+                Order
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="/assortment">Assortment</a>
+            <Link className={useRoute('/assortment') ? 'active' : ''} to="/assortment">
+                Assortment
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="/about">About us</a>
+            <Link className={useRoute('/about') ? 'active' : ''} to="/about">
+                About us
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="/admin">Admin</a>
+            <Link className={useRoute('/admin') ? 'active' : ''} to="/admin">
+                Admin
+              </Link>
             </li>
           </ul>
         </nav>
         <div className="sign-in">
+          {/* <ActionButton className="sign-in"  buttonText='Sign-in' /> */}
           <button className="sign-in__button">Sign in</button>
         </div>
       </div>
