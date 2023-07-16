@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./admin.scss"
 import AdminContent from './AdminContent';
 
-const Admin: React.FC = () => {
+const AdminPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [isIncorrectPassword, setIsIncorrectPassword] = useState(false);
@@ -54,4 +54,4 @@ const Admin: React.FC = () => {
 
 };
 
-export default Admin;
+export default AdminPage;

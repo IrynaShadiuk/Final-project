@@ -1,20 +1,16 @@
 import { ReactNode } from 'react';
 import Header from './Header/Header';
-import AdminPage from '../admin/Admin';
 import Footer from './Footer/Footer';
-import Home from '../home/Home';
+import { Outlet } from 'react-router-dom';
 
-interface LayoutProps {
-  children: ReactNode;
-}
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ()=> {
   return (
     <div className="layout">
       <Header />
-      <main>{children}</main>
-      <Home />
-      {/* <AdminPage /> */}
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
