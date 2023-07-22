@@ -42,11 +42,13 @@
   
   input,
   textarea {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 40px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
   textarea {
@@ -54,7 +56,8 @@
   }
   
   .submit-btn {
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: 40px;
     margin-top: 20px;
     background-color: #ffd700;
@@ -63,16 +66,65 @@
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f9c200;
+    }
   }
   
   .footer-bottom {
     background-color: #000;
     padding: 10px;
-    text-align: right;
+    text-align: center;
   }
   
   .footer-bottom p {
     color: #fff;
     font-size: 14px;
   }
-  
+
+  @media (max-width: 768px) {
+    .footer-top {
+      height: auto;
+      padding: 40px 20px;
+    }
+
+    .footer-top h2 {
+      font-size: 20px;
+    }
+
+    .footer-top p {
+      font-size: 14px;
+    }
+
+    .order-form {
+      margin-top: 20px;
+
+      .form-group {
+        margin-bottom: 15px;
+
+        input,
+        textarea {
+          width: 100%;
+          max-width: none;
+          height: 35px;
+          font-size: 14px;
+        }
+
+        textarea {
+          height: 120px;
+        }
+      }
+
+      .submit-btn {
+        max-width: 120px;
+        height: 35px;
+        font-size: 14px;
+      }
+    }
+
+    .footer-bottom {
+      text-align: center;
+    }
+  }
