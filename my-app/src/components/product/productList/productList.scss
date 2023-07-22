@@ -33,5 +33,22 @@
         cursor: pointer;
       }
     }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+  
+      .product {
+        img {
+          max-height: 150px;
+        }
+  
+        .product-content {
+          .product-title {
+            font-size: 18px;
+          }
+        }
+      }
+    }
   }
+  
   

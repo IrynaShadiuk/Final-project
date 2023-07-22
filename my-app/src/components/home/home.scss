@@ -39,10 +39,18 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 img {
   width: 100%;
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
 }
 
 .image-caption {
@@ -56,10 +64,20 @@ img {
   padding: 10px;
   text-align: center;
   width: 60%;
+
+  @media (max-width: 768px) {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+  }
 }
 
 .text-container-2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 }

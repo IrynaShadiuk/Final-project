@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './footer.scss';
+import "./footer.scss"
 
 interface OrderForm {
   name: string;
@@ -26,7 +26,6 @@ const Footer: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Ваша логіка обробки форми тут
     console.log('Order submitted:', orderForm);
     setOrderForm({
       name: '',
