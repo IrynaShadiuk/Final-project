@@ -9,9 +9,10 @@
   }
 }
 
+
 .header {
+
   &__top {
-    background: #bca69d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +20,7 @@
     display: flex;
     justify-content: space-between;
   }
+  
 
   &__background {
     width: 100%;
@@ -49,6 +51,7 @@
   animation: fadeInImg 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.1s 1 normal forwards;
   margin-left: 10px;
 }
+
 
 .menu {
 
@@ -137,6 +140,16 @@
   font-size: 18px;
   text-decoration: none;
 }
+}
+
+.light-theme {
+  background-color:#bca69d;
+
+ 
+}
+
+.dark-theme {
+  background-color: rgba(99, 90, 90, 0.699);
 }
 
 

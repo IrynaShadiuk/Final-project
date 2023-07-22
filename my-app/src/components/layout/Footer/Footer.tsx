@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "./footer.scss"
+import { ThemeContext } from '../../../ThemeProvider';
+import { useContext } from 'react';
 
 interface OrderForm {
   name: string;
@@ -8,6 +10,9 @@ interface OrderForm {
 }
 
 const Footer: React.FC = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext) as any;
+  console.log("context");
+
   const [orderForm, setOrderForm] = useState<OrderForm>({
     name: '',
     email: '',
@@ -35,14 +40,15 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer>
-      <div className="footer-top">
+    <footer className={`footer ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <div className={"footer-top ${theme === 'dark' ? 'dark-theme' : 'light-theme'}"}>
         <h2>MAKE AN ORDER</h2>
         <p>For orders or any other questions drop a message here.</p>
         <form className="order-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Enter your name</label>
             <input
+              className='input-1'
               type="text"
               id="name"
               name="name"
@@ -54,6 +60,7 @@ const Footer: React.FC = () => {
           <div className="form-group">
             <label htmlFor="email">Enter your email</label>
             <input
+              className='input-1'
               type="email"
               id="email"
               name="email"
@@ -76,6 +83,13 @@ const Footer: React.FC = () => {
         </form>
       </div>
       <div className="footer-bottom">
+      <div className="theme-box">
+          <p>{theme}</p>
+          <input 
+          type="checkbox" 
+          checked={theme === 'dark'} 
+          onChange={toggleTheme} />
+        </div>
         <p>Bohemian © 2023</p>
       </div>
     </footer>

@@ -1,8 +1,18 @@
 .footer {
     background-color: #fefcf5;
     padding: 40px 0;
+  
+}
+  .light-theme {
+    background-color:#bca69d;
+  
+   
   }
   
+  .dark-theme {
+    background-color: rgba(99, 90, 90, 0.699);
+  }
+
   .footer-top {
     background-image: url("../../img/footer.jpg");
     text-align: center;
@@ -12,6 +22,7 @@
     justify-content: center;
     align-items: center;
   }
+ 
   
   .footer-top h2 {
     color: #333;
@@ -40,7 +51,7 @@
     font-size: 16px;
   }
   
-  input,
+  .input-1,
   textarea {
     width: 100%;
     max-width: 300px;
