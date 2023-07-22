@@ -3,6 +3,15 @@
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px; 
     margin-top: 20px; 
+
+    .light-theme {
+      background-color:#bca69d;
+    }
+    
+    .dark-theme {
+      background-color: rgba(99, 90, 90, 0.699);
+    }
+    
   
     .product {
       border: 1px solid #ccc;
