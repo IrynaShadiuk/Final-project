@@ -72,6 +72,7 @@ const Footer: React.FC = () => {
           <div className="form-group">
             <label htmlFor="message">Enter your message</label>
             <textarea
+              className='txt-ft'
               id="message"
               name="message"
               value={orderForm.message}

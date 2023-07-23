@@ -21,7 +21,7 @@ const AdminPage: React.FC = () => {
       setLoggedIn(true);
     } else {
         setIsIncorrectPassword(true);
-    //   alert('Невірний пароль');
+
     }
   };
 
