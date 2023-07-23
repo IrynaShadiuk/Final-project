@@ -5,6 +5,7 @@ import Layout from './components/layout/Layout';
 import ProductPage from './components/product/Product';
 import AdminPage from './components/admin/Admin';
 import Home from './components/home/Home';
+import AboutUs from './components/aboutUs/AboutUs';
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/assortment" element={<ProductPage />} />
+          <Route path="/about" element={<AboutUs />} />
         </Route>
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
