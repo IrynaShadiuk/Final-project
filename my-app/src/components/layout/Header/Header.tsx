@@ -45,11 +45,6 @@ const Header = () => {
               </Link>
             </li>
             <li className="menu__item">
-            <Link className={useRoute('/order') ? 'active' : ''} to="/order">
-                Order
-              </Link>
-            </li>
-            <li className="menu__item">
             <Link className={useRoute('/assortment') ? 'active' : ''} to="/assortment">
                 Assortment
               </Link>
@@ -84,7 +79,3 @@ const Header = () => {
 
 export default Header;
 
-// {/* <div className="sign-in"> */}
-//           // {/* <ActionButton className="sign-in"  buttonText='Sign-in' />
-//           <button className="sign-in__button">Sign in</button>
-//         </div> */}
